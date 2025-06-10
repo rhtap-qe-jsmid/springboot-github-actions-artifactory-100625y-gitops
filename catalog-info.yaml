@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: springboot-github-actions-artifactory-100625y-gitops
+  description: This is GitOps manifest for springboot-github-actions-artifactory-100625y   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=springboot-github-actions-artifactory-100625y
+    backstage.io/kubernetes-id: springboot-github-actions-artifactory-100625y 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: rhtap-qe-jsmid/springboot-github-actions-artifactory-100625y-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:springboot-github-actions-artifactory-100625y
